@@ -5,20 +5,23 @@ import {
   SearchBar,
   Navigation,
   NavigationOption,
+  Input,
   SearchIcon
 } from "../Header/Header.styles";
+
 
 const Header = () => {
   return (
     <Wrapper>
       <Logo />
       <SearchBar>
-        <input type="text"/> 
+        <Input type="text"/> 
+        <SearchIcon/>
       </SearchBar>
-      <Navigation>
+         <Navigation>
         <NavigationOption>
-          <span>Hello</span>
-          <span>Sign in</span>
+          <span>Hello, sign in</span>
+          <span>Account & Lists</span>
         </NavigationOption>
         <NavigationOption>
           <span>Returns</span>
