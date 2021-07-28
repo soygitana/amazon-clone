@@ -6,7 +6,8 @@ import {
   Navigation,
   NavigationOption,
   Input,
-  SearchIcon
+  SearchIcon,
+  ShoppingCart
 } from "../Header/Header.styles";
 
 
@@ -30,6 +31,10 @@ const Header = () => {
         <NavigationOption>
           <span>Your</span>
           <span>Prime</span>
+        </NavigationOption>
+        <NavigationOption>
+         <ShoppingCart/>
+         <p>0</p>
         </NavigationOption>
       </Navigation>
     </Wrapper>
