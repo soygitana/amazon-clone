@@ -71,7 +71,8 @@ export const NavigationOption = styled.div`
 `;
 
 export const ShoppingCart = styled(ShoppingBag)`
-height: 35px;
-  padding: 5px;
+padding-top:5px;
+margin-right: 5px;
+height: 30px;
   color: white;
 `;
