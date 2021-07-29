@@ -1,37 +1,37 @@
 import React from "react";
 import {
-    ProductItem,
-    StyledInfo,
-    Title,
-    Price,
-    Stars,
-    AddButton
-  } from "../Product/Product.styles";
+  ProductItem,
+  StyledInfo,
+  Title,
+  Price,
+  Stars,
+  AddButton,
+} from "../Product/Product.styles";
 
-
-const Product = () => {
+const Product = ({ id, title, image, price, rating }) => {
   return (
-<>
-    <ProductItem>
-<StyledInfo>
-<Title>title</Title>
-<Price>
-    <small>$</small>
-    <strong>price</strong>
-    </Price>
-<Stars>
-    <p>⭐</p>
-</Stars>
-
-
-
-</StyledInfo>
-
-<img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg" alt=""/>
-
-<AddButton>Add to Basket</AddButton>
-
-    </ProductItem>
+    <>
+      <ProductItem>
+        <StyledInfo>
+          <Title>{title}</Title>
+          <Price>
+            <small>$</small>
+            <strong>{price}</strong>
+          </Price>
+          <Stars>
+            {Array(rating)
+              .fill()
+              .map((_, i) => (
+                <p>⭐</p>
+              ))}
+          </Stars>
+        </StyledInfo>
+        <img
+          src={image}
+          alt="image"
+        />
+        <AddButton>Add to Basket</AddButton>
+      </ProductItem>
     </>
   );
 };

@@ -7,19 +7,22 @@ import {
   NavigationOption,
   Input,
   SearchIcon,
-  ShoppingCart
+  ShoppingCart,
+  Cart
 } from "../Header/Header.styles";
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Wrapper>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <SearchBar>
-        <Input type="text"/> 
-        <SearchIcon/>
+        <Input type="text" />
+        <SearchIcon />
       </SearchBar>
-         <Navigation>
+      <Navigation>
         <NavigationOption>
           <span>Hello, sign in</span>
           <span>Account & Lists</span>
@@ -32,10 +35,12 @@ const Header = () => {
           <span>Your</span>
           <span>Prime</span>
         </NavigationOption>
-        <NavigationOption>
-         <ShoppingCart/>
-         <p>0</p>
-        </NavigationOption>
+        <ShoppingCart>
+          <Link to="/checkout">
+            <Cart />
+          </Link>
+          <p>0</p>
+        </ShoppingCart>
       </Navigation>
     </Wrapper>
   );

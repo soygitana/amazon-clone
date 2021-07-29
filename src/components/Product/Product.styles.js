@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const ProductItem = styled.div`
 display: flex;
 justify-content: flex-end;
@@ -10,18 +8,15 @@ margin: 10px;
 padding: 20px;
 width: 100%;
 max-height: 400px;
-min-width: 300px;
+min-width: 200px;
 background-color: ${({ theme }) => theme.colors.white};
 z-index: 1;
-
-
 
 img {
 max-height: 200px;
 width: 100%;
 object-fit: contain;
 margin-bottom: 15px;
-
 }
 `;
 
@@ -40,7 +35,8 @@ margin-top: 5px;
 `;
 
 export const Stars = styled.div`
-color: black;
+display: flex;
+flex-direction: row;
 `;
 
 export const AddButton = styled.button`

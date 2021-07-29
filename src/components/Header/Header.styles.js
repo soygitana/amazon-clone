@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from "../../assets/img/amazon.jpg";
 import { Search } from "@styled-icons/material";
-import {ShoppingBag} from "@styled-icons/material";
+import { ShoppingBag } from "@styled-icons/material";
 
 export const Wrapper = styled.div`
   height: 60px;
@@ -55,24 +55,25 @@ export const NavigationOption = styled.div`
   margin-left: 10px;
   margin-right: 10px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
 
   span:nth-last-of-type(1) {
     font-weight: 700;
-    font-size: 13px;
-  }
-
-  &:nth-last-of-type(1) {
-    display: flex;
-    flex-direction: row;
-    color: ${({ theme }) => theme.colors.orange};
-    font-size: 13px;
   }
 `;
 
-export const ShoppingCart = styled(ShoppingBag)`
-padding-top:5px;
-margin-right: 5px;
-height: 30px;
+export const ShoppingCart = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 13px;
+  color: white;
+`;
+
+export const Cart = styled(ShoppingBag)`
+  padding-top: 5px;
+  margin-right: 5px;
+  height: 30px;
   color: white;
 `;
