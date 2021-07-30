@@ -1,4 +1,5 @@
 import React from "react";
+import { useStateValue } from "../../StateProvider";
 import {
   ProductItem,
   StyledInfo,
@@ -9,6 +10,23 @@ import {
 } from "../Product/Product.styles";
 
 const Product = ({ id, title, image, price, rating }) => {
+
+  const [{basket}, dispatch] = useStateValue();
+
+const addToBasket = () => {
+// dispatch the item into data layer
+dispatch({
+type: 'ADD_TO_BASKET',
+item: {
+id,
+title,
+image,
+price,
+rating
+},
+});
+};
+
   return (
     <>
       <ProductItem>
@@ -30,7 +48,7 @@ const Product = ({ id, title, image, price, rating }) => {
           src={image}
           alt="image"
         />
-        <AddButton>Add to Basket</AddButton>
+        <AddButton onClick={addToBasket}>Add to Basket</AddButton>
       </ProductItem>
     </>
   );

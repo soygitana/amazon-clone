@@ -11,8 +11,12 @@ import {
   Cart
 } from "../Header/Header.styles";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
 
 const Header = () => {
+
+  const [{basket}, dispatch] = useStateValue();
+
   return (
     <Wrapper>
       <Link to="/">
@@ -39,7 +43,7 @@ const Header = () => {
           <Link to="/checkout">
             <Cart />
           </Link>
-          <p>0</p>
+          <p>{basket?.length}</p>
         </ShoppingCart>
       </Navigation>
     </Wrapper>
