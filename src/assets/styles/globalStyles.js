@@ -19,5 +19,6 @@ export const GlobalStyle = createGlobalStyle`
   
   a, button {
     font-family: 'Arial', sans-serif;
+    cursor: pointer;
   }
 `;

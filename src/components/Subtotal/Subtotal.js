@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../Subtotal/Subtotal.styles";
+import { Wrapper, CheckoutButton } from "../Subtotal/Subtotal.styles";
 import CurrencyFormat from "react-currency-format";
 
 const Subtotal = () => {
@@ -10,7 +10,7 @@ const Subtotal = () => {
           <>
             <p>
               Subtotal (0 items):
-              <strong>0</strong>
+              <strong> 0</strong>
             </p>
             <small>
               <input type="checkbox" />
@@ -24,6 +24,7 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={"$"}
       />
+        <CheckoutButton>Proceed to Checkout</CheckoutButton>
     </Wrapper>
   );
 };

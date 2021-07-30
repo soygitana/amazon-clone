@@ -43,8 +43,7 @@ export const AddButton = styled.button`
 background-color: ${({ theme }) => theme.colors.orange};
 border: 1px solid;
 margin-top: 10px;
-cursor: pointer;
-border-color: #a88734;
+border-color: ${({ theme }) => theme.colors.orangeGradient};
 font-size: 12px;
 width: 100px;
 margin: 0 auto;
